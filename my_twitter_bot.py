@@ -1,10 +1,15 @@
 import tweepy
 import time
+from chatterbot import ChatBot
+from chatbot.trainers import ListTrainer
+import os
 # NOTE: I put my keys in the keys.py to separate them
 # from this main file.
 # Please refer to keys_format.py to see the format.
 from keys import *
 
+bot = ChatBot('Bot')
+bot.set_trainer(ListTrainer)
 
 print('this is my twitter bot', flush=True)
 
