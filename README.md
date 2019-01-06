@@ -1,4 +1,6 @@
 # twitter_bot
+Idea: my idea is to make the chatbot tweet instead of you with something that makes sense.
+
 Set up notes
 
 You will first need to get the twitter developer access tokens
