@@ -44,23 +44,21 @@ def reply_to_tweets():
     for mention in reversed(mentions):
         print(str(mention.id) + ' - ' + mention.full_text, flush=True)
         last_seen_id = mention.id
-        store_last_seen_id(last_seen_id, FILE_NAME)'''
+        store_last_seen_id(last_seen_id, FILE_NAME)
         for files in os.listdir('/english'):
             data= open('/english')
             bot.train(data)
         while True:
-            message= input('vous: ')
+            message= mention
             if message.strip() != 'Bye':
-                reply = bot.get_response(message)
+                reply = bot.get_response(message)'''
                 print('ChatBot: ', reply)
             if message.strip() == 'Bye':
                 print('ChatBot: Bye')
                 Break'''
-                if '#helloworld' in mention.full_text.lower():
-                    print('found #helloworld!', flush=True)
                     print('responding back...', flush=True)
                     api.update_status('@' + mention.user.screen_name +
-                            '#HelloWorld back to you!', mention.id)
+                            reply , mention.id)
 
 while True:
     reply_to_tweets()
